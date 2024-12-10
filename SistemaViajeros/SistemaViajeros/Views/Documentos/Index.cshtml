@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SistemaViajeros.Controllers.Documentos>
+
+@{
+    ViewBag.Title = "Documentos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Documentos - Utilizados para viajar, los más comunes son el Pasaporte, la Cédula de Identidad y una VISA</h2>
+<p>¡Recuerda registrar tu fecha de expiración usando el formato YYYY/MM/DD!</p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaExpiracion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Viajeros.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaExpiracion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Viajeros.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DocumentoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DocumentoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DocumentoID })
+        </td>
+    </tr>
+}
+
+</table>

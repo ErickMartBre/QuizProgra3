@@ -1,0 +1,51 @@
+﻿@model SistemaViajeros.Controllers.PuntosDeControl
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PuntosDeControl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreControl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreControl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ubicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ubicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PuntoControlID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

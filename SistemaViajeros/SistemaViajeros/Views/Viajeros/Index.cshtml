@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SistemaViajeros.Controllers.Viajeros>
+
+@{
+    ViewBag.Title = "Viajeros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Viajeros - Asegurate de tener tu usuario registrado</h2>
+<p>¡Recuerda registrar tu fecha de nacimiento usando el formato YYYY/MM/DD!</p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApellidoPaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApellidoMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nacionalidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApellidoPaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApellidoMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nacionalidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ViajeroID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ViajeroID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ViajeroID })
+        </td>
+    </tr>
+}
+
+</table>

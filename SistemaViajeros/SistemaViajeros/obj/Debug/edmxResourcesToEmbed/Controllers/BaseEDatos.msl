@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SistemaViajerosModelStoreContainer" CdmEntityContainer="SistemaViajerosEntities">
+    <EntitySetMapping Name="Documentos">
+      <EntityTypeMapping TypeName="SistemaViajerosModel.Documentos">
+        <MappingFragment StoreEntitySet="Documentos">
+          <ScalarProperty Name="DocumentoID" ColumnName="DocumentoID" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="FechaExpiracion" ColumnName="FechaExpiracion" />
+          <ScalarProperty Name="ViajeroID" ColumnName="ViajeroID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movimientos">
+      <EntityTypeMapping TypeName="SistemaViajerosModel.Movimientos">
+        <MappingFragment StoreEntitySet="Movimientos">
+          <ScalarProperty Name="MovimientoID" ColumnName="MovimientoID" />
+          <ScalarProperty Name="ViajeroID" ColumnName="ViajeroID" />
+          <ScalarProperty Name="DocumentoID" ColumnName="DocumentoID" />
+          <ScalarProperty Name="PuntoControlOrigen" ColumnName="PuntoControlOrigen" />
+          <ScalarProperty Name="PuntoControlDestino" ColumnName="PuntoControlDestino" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+          <ScalarProperty Name="TipoSolicitud" ColumnName="TipoSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PuntosDeControl">
+      <EntityTypeMapping TypeName="SistemaViajerosModel.PuntosDeControl">
+        <MappingFragment StoreEntitySet="PuntosDeControl">
+          <ScalarProperty Name="PuntoControlID" ColumnName="PuntoControlID" />
+          <ScalarProperty Name="NombreControl" ColumnName="NombreControl" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="SistemaViajerosModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Viajeros">
+      <EntityTypeMapping TypeName="SistemaViajerosModel.Viajeros">
+        <MappingFragment StoreEntitySet="Viajeros">
+          <ScalarProperty Name="ViajeroID" ColumnName="ViajeroID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

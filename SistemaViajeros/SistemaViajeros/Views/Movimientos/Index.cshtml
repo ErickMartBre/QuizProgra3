@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SistemaViajeros.Controllers.Movimientos>
+
+@{
+    ViewBag.Title = "Movimientos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movimientos - Indican la auditoria de viaje entre los aeropuertos registrados</h2>
+<p>¡Recuerda registrar tu fecha de viaje usando el formato YYYY/MM/DD!</p>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaHora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoSolicitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Documentos.TipoDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PuntosDeControl.NombreControl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PuntosDeControl1.NombreControl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Viajeros.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaHora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoSolicitud)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Documentos.TipoDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PuntosDeControl.NombreControl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PuntosDeControl1.NombreControl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Viajeros.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MovimientoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MovimientoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MovimientoID })
+        </td>
+    </tr>
+}
+
+</table>

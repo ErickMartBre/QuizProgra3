@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8fd1164d7a24faaa49d38a12450fdc4" Name="Diagram1">
+        <EntityTypeShape EntityType="SistemaViajerosModel.Documentos" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaViajerosModel.Movimientos" Width="1.5" PointX="7.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaViajerosModel.PuntosDeControl" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaViajerosModel.Usuarios" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaViajerosModel.Viajeros" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="SistemaViajerosModel.FK_Documentos_Viajeros" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaViajerosModel.FK_Movimientos_Documentos" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaViajerosModel.FK_Movimientos_Destino" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaViajerosModel.FK_Movimientos_Origen" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaViajerosModel.FK_Movimientos_Viajeros" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaViajerosModel.FK_PuntosDeControl_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaViajerosModel.FK_Viajeros_Usuarios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
